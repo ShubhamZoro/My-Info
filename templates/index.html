@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const showFormBtn = document.getElementById('showFormBtn');
+    const formCard = document.getElementById('formCard');
+
+    showFormBtn.addEventListener('click', () => {
+        formCard.style.display = 'block';
+    });
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Site</title>
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Top-container">
+        <img class="top_cloud"  src="{{ url_for('static', filename='cloud.png')}}"  alt="Cloud Image">
+        <h1>I'm Shubham Shekhar.</h1>
+        <h2>A Programmer.</h2>
+        <img class="bottom_cloud" src="{{ url_for('static', filename='cloud.png')}}" alt="Cloud Image">
+        <img src="{{ url_for('static', filename='mountain.png')}}" alt="mountain Image">
+    </div>
+<!--    # middle-->
+    <div class="middle-container">
+        <div class="profile">
+          <img src="{{ url_for('static', filename='Shubham.png')}}" style="width: 200px ;" alt="">
+          <h2>Hello.</h2>
+          <p>I am a programmer. I love watching Cricket and Kabaddi.</p>
+        </div>
+        <hr>
+        <div class="skills">
+          <h2>My Skills.</h2>
+          <div class="skill-row">
+            <img class= "Data" src="{{ url_for('static', filename='app-development-banner_33099-1720-modified.png')}}" >
+            <h3>Python and App Development</h3>
+            <p>I am learning Python from 100Days of Code course. I know how to use it make GUI based App and fetch data using api, web development using Flask and Machine Learning.</p>
+              <p class="DataDescription">Some of my Web Development projects links</p>
+              <a class="project" href="https://github.com/ShubhamZoro/BLOG" >Blog</a>
+                <a class="project" href="https://github.com/ShubhamZoro/Todolist">Todo List</a>
+
+
+          </div>
+
+            <div class="skill-row">
+            <img class="Data" src="{{ url_for('static', filename='ML-photoaidcom-cropped.png')}}" alt="" >
+            <h3>Data Science and Machine Learning</h3>
+            <p class="DataDescription">I have learn Data Science, Machine Learning, NLP and many Library Like Langchain, Tensorflow, Scikit and open source model like OpenAI and Hugging gace model.</p>
+                <p class="DataDescription">Some of my Data Science and ML Projects Links</p>
+                <a class="project" href="https://github.com/ShubhamZoro/Data-Science" >Data Science</a>
+                <a class="project" href="https://generativeai-ektlwlf2grfzn49uoityfw.streamlit.app/">ChatwithWebsite</a>
+                <a class="project" href="https://generativeai-g7gl2ljmfscobrpbsifgss.streamlit.app/">ChatwithPdf</a>
+                <a class="project" href="https://github.com/ShubhamZoro/Deep_Learning/tree/main/NLP/SkimLit">SkimLit</a>
+                <a class="project" href="https://generativeai-4k8wggwb42crszwfrktayz.streamlit.app/">ChatwithCsv</a>
+          </div>
+
+            <div class="skill-row">
+            <img class="Data" src="{{ url_for('static', filename='dsa.png')}}" alt="" >
+            <h3>C++ and DataStructure</h3>
+            <p class="DataDescription">I know C and C++ to some extent and also learn data structure like LinkedList, Stack ,Queue, Binary Tree, BST and Graphs.</p>
+              <p class="DataDescription">Here is Dsa Github Repo and Leetcode Profile Links</p>
+              <a class="project" href="https://github.com/ShubhamZoro/Codingquestion" >Github Coding Repo</a>
+                <a class="project" href="https://leetcode.com/ShubhamShekhar/">LeetCode Profile</a>
+          </div>
+        </div>
+        <hr>
+
+<div class="contact-me">
+    <h2> Get In Touch </h2>
+    <h3>If you love coding as much as me.</h3>
+    <a class="btn" href="mailto:shubhamshekhar19@gmail.com">CONTACT ME</a>
+</div>
+
+      </div>
+<!--bottom-->
+      <div class="bottom-container">
+    <div class="social-media">
+        <a class="footer-link" href="https://twitter.com/Shubham_Coder"><img src="{{ url_for('static', filename='twitter.png')}}" alt=""></a>
+        <a class="footer-link" href="https://github.com/ShubhamZoro"><img src="{{ url_for('static', filename='github-logo.png')}}" alt=""></a>
+        <a class="footer-link" href="https://www.linkedin.com/in/shubham-coder/"><img src="{{ url_for('static', filename='linkedin-original.256x256.png')}}"  alt=""></a>
+    </div>
+    <p>© {{year}} Shubham Shekhar.</p>
+</div>
+    
+    
+</body>
+</html>
