@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
 
+   </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +25,7 @@
     <div class="Top-container">
         <img class="top_cloud"  src="{{ url_for('static', filename='cloud.png')}}"  alt="Cloud Image">
         <h1>I'm Shubham Shekhar.</h1>
-        <h2>A Programmer.</h2>
+        <h2>A Programmer</h2>
         <img class="bottom_cloud" src="{{ url_for('static', filename='cloud.png')}}" alt="Cloud Image">
         <img src="{{ url_for('static', filename='mountain.png')}}" alt="mountain Image">
     </div>
@@ -29,7 +38,7 @@
         </div>
         <hr>
         <div class="skills">
-          <h2>My Skills.</h2>
+          <h2>My Skills</h2>
           <div class="skill-row">
             <img class= "Data" src="{{ url_for('static', filename='app-development-banner_33099-1720-modified.png')}}" >
             <h3>Python and App Development</h3>
@@ -64,11 +73,31 @@
         </div>
         <hr>
 
+
+
 <div class="contact-me">
-    <h2> Get In Touch </h2>
-    <h3>If you love coding as much as me.</h3>
-    <a class="btn" href="mailto:in.shubhamshekhar@gmail.com">CONTACT ME</a>
+  <h2> Get In Touch </h2>
+  <h3>If you love coding as much as me.</h3>
+  <button class="btn" onclick="openForm()">Open Form</button>
+  <div class="form-popup" id="myForm" style="display:none;">
+     <div class="form-container">
+        <form action="{{ url_for('contact')}}" method="post">
+           <h3>Mail Me</h3>
+           <label for="Email"><b>Email</b></label>
+           <input type="email" placeholder="Enter Email" name="Email" required>
+           <label for="subject"><b>Subject</b></label>
+           <input type="text" placeholder="Enter Subject" name="subject" required>
+           <label for="message"><b>Message</b></label>
+           <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+           <button type="submit" class="btn">Send</button>
+           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+     </div>
+  </div>
 </div>
+
+
+  
 
       </div>
 <!--bottom-->
